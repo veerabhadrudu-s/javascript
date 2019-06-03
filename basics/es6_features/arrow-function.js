@@ -1,19 +1,19 @@
 //This is a sample example related to arrow function or lamda expression
 //Arrow function is alternative representation for ananymous function.
-//The major difference is it preserves "this" i.e in arrow function "this" keywork will refer/point to object where it was defined.
+//The major difference is it preserves "this" i.e in arrow function "this" keywork will refer/point to enclosing context object.
 //In this example we have using Tempalte String feature using ``(backtick character). 
 
 function Person(name,age){
     this.name=name;
     this.age=age;
-    this.printDetailsUsingAnanymous=function(message) {        
+    this.printDetailsUsingAnanymous=function(message) {
         console.log(`${message} ${this.name}`);
         console.log(`Anonymous function - Person with name ${this.name} has age ${this.age} `);
     };
     this.printDetailsUsingArrowFunction=(message)=>{        
         console.log(`${message} ${this.name}`);
-        console.log(`Fat Arrow function -Person with name ${this.name} has age ${this.age} `);
-    }
+        console.log(`Fat Arrow function - Person with name ${this.name} has age ${this.age} `);
+    };
 }
 
 let person=new Person("Veera",31);
