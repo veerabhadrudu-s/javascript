@@ -18,6 +18,8 @@ function Person(name, age) {
     };
 }
 
+Person.prototype.arrowFuntionDefinedInPrototype=()=>console.log(`Prototype arrow function -`,this);
+
 let person = new Person("Veera", 31);
 let anonyFun = person.printDetailsUsingAnanymous;
 let fatArrowFun = person.printDetailsUsingArrowFunction;
@@ -28,6 +30,7 @@ anonyFun("Greetings");
 this.this_anonyFun("Greetings");
 // As this is a lamda function reference, "this" in this function call will point to person object irrespective of the way we execute the function. 
 fatArrowFun("Greetings");
+person.arrowFuntionDefinedInPrototype();
 // Inorder to make "this" keyword to work in anonymous function ,we need to bind "this" context to anonymous function before invoking it.
 // This can be achived using any one of bind/call/apply function.
 // For more info check https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
@@ -41,7 +44,8 @@ this.greetings = () => console.log(`Greetings ${this.user}`);
 this.greetings();
 console.log(this);
 
-//Another example of arrow function , in this case enclosing scope is local module/file.
+//Another example of arrow function defined as object method
+//In this case enclosing scope or near by this scope while defing objectLiteral(which includes defining arrow function) is local module/file.
 let objectLiteral = {
     name: "Garry",
     age: 25,
@@ -53,3 +57,4 @@ let objectLiteral = {
 };
 
 objectLiteral.printDetailsUsingArrowFunction("Greetings");
+
