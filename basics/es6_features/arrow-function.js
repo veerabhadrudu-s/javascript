@@ -29,12 +29,14 @@ this.this_anonyFun("Greetings");
 // As this is a lamda function reference, "this" in this function call will point to person object irrespective of the way we execute the function. 
 fatArrowFun("Greetings");
 // Inorder to make "this" keyword to work in anonymous function ,we need to bind "this" context to anonymous function before invoking it.
-// This can be achived using bind/call/apply function.
-// Bind method will bing context and return's new function refrence(It doesn't invoke function)
-// Call method will bind and invoke the function.
-// apply function is also like call function ,the difference is in the way we pass arguments to these functions.
-// call expects function arguments in comma seperated and apply expects in the form of array.
+// This can be achived using any one of bind/call/apply function.
 // For more info check https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
 anonyFun.call(person,"Greetings");
 //anonyFun.apply(person,["Greetings"]);
+
+//Another Example of Arrow function with respect to local module/file.
+this.user="Veera";
+this.greetings=() => console.log(`Greetings ${this.user}`);
+this.greetings();
+console.log(this);
