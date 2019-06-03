@@ -16,6 +16,7 @@ let [one, two, , four] = numbers;
 let { name, age, greet } = person;
 // Destructuring of Object. Using custom variables.
 let { name: person_name, age: person_age } = person;
+console.log(person);
 console.log(`Printing destructured array values : ${one} ${two} ${four}`);
 console.log(`Printing destructured object values : name - ${name} age - ${age}`);
 console.log(`Printing destructured object values : person_name - ${name} person_age - ${age}`);
