@@ -35,9 +35,12 @@ console.log(`type of Person is ${typeof person1}`);
 console.log('Printing instance of person object - '+person1);
 console.log('Printing Person class - '+Person);
 console.log('Persons prototype is '+Person.prototype);
-console.log('Persons prototype\'s prototype is '+Person.prototype.prototype);
+console.log('Persons prototype\'s prototype is '+Person.prototype.__proto__);
+console.log(`Persons prototype's prototype is equal to Object's prototype ${person1.__proto__.__proto__==Object.prototype}`);
 for(let field in person1){
     console.log(`Printing field of person object - ${field}`);
 }
+console.log(`Methods of Person object - ${FindAllMethods(person1)}`);
 //All the methods we define in classes will reside in Prototype object of class(apart from static methods). 
 console.log(`Methods of Person class Prototype - ${FindAllMethods(Person.prototype)}`);
+

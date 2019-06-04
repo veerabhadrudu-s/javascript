@@ -63,4 +63,18 @@ let objectLiteral = {
 
 objectLiteral.printDetailsUsingArrowFunction("Greetings");
 console.log('Persons prototype is '+Person.prototype);
-console.log('Persons prototype\'s prototype is '+Person.prototype.prototype);
+console.log('Persons prototype\'s prototype is '+Person.prototype.__proto__);
+console.log(`Persons prototype's prototype is equal to Object's prototype ${person.__proto__.__proto__==Object.prototype}`);
+console.log('objectLiteral prototype is '+objectLiteral.__proto__);
+console.log(`Is objectLiteral prototype equal to Object\'s prototype ${objectLiteral.__proto__==Object.prototype}`);
+console.log(`Is objectLiteral prototype's prototype ${objectLiteral.__proto__.__proto__}`);
+
+function FindAllMethods(obj) {
+    return Object.getOwnPropertyNames(obj).filter(function(property) {
+        return typeof obj[property] == "function";
+    });
+}
+
+console.log(`Methods of Person object - ${FindAllMethods(person)}`);
+console.log(`Methods of Person prototype - ${FindAllMethods(Person.prototype)}`);
+console.log(`Methods of objectLiteral - ${FindAllMethods(objectLiteral)}`);
