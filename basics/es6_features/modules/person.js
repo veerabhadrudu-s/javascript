@@ -4,8 +4,8 @@ export class Person{
         this.name=name;
         this.age=age;
     }
-    printDetails(){
-        console.log(`Name of the person is ${this.name} and the age is ${this.age}`);
+    getDetails() {
+        return `Person with name ${this.name} has ${this.age} years of age`;
     }
 
     static isEquals(person1,person2){

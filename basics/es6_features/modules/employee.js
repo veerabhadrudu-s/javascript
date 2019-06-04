@@ -1,5 +1,5 @@
 //Employee class
-import Person from "person.js";
+import { Person } from "./person";
 
 export class Employee extends Person {
     constructor(name, age, organization) {

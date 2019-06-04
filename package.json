@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/gado4b2/javascript/issues"
   },
-  "homepage": "https://github.com/gado4b2/javascript#readme"
+  "homepage": "https://github.com/gado4b2/javascript#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5"
+  }
 }
