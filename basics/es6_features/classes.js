@@ -31,6 +31,7 @@ person1.printDetails();
 console.log(`person1 and person2 are ${Person.isEquals(person1,person2)?"Equal":"Not Equal"}`);
 console.log(`person1 and person3 are ${Person.isEquals(person1,person3)?"Equal":"Not Equal"}`);
 console.log(`type of Person class is ${typeof Person}`);
+console.log(`type of Person is ${typeof person1}`);
 console.log('Printing instance of person object - '+person1);
 console.log('Printing Person class - '+Person);
 console.log('Persons prototype is '+Person.prototype);
