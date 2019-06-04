@@ -1,4 +1,17 @@
+/* 
+ES6 modules and inheritance in one example
+Make sure to run this program using below babel command.
+npx babel-node basics/es6_features/modules/modules-classes-inheritance.js 
 
+Bable is a tool/tranpiler which converts ES6 code to Before ES6 code and exexutes it.
+For more info on this check out below links
+https://babeljs.io/docs/en/babel-node
+https://github.com/babel/example-node-server
+https://babeljs.io/docs/en/babel-cli
+https://babeljs.io/docs/en/
+https://babeljs.io/en/setup
+
+*/
 import { Person } from "./person";
 import { Employee } from "./employee";
 import { Student } from "./student";
