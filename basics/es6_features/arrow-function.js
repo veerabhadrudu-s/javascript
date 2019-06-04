@@ -1,8 +1,10 @@
-//This is a sample example related to arrow function or lamda expression
-//Arrow function is alternative representation for ananymous function.
-//The major difference is it preserves "this" i.e 
-//in arrow function "this" keywork will refer/point to enclosing context object("this") when it was created.
-//In this example we have using Tempalte String feature using ``(backtick character). 
+/* 
+This is a sample example related to arrow function or lamda expression
+Arrow function is alternative representation for ananymous function.
+The major difference is it preserves "this" i.e 
+in arrow function "this" keywork will refer/point to enclosing context object("this") when it was created.
+In this example we have using Tempalte String feature using ``(backtick character).  
+*/
 
 function Person(name, age) {
     this.name = name;
@@ -36,10 +38,12 @@ this.this_anonyFun("Greetings");
 // As this is a lamda function reference, "this" in this function call will point to person object irrespective of the way we execute the function. 
 fatArrowFun("Greetings");
 person.arrowFuntionDefinedInPrototype();
-// Inorder to make "this" keyword to work in anonymous function ,we need to bind "this" context to anonymous function before invoking it.
-// This can be achived using any one of bind/call/apply function.
-// For more info check https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+/* 
+In order to make "this" keyword to work in anonymous function ,we need to bind "this" context to anonymous function before invoking it.
+This can be achived using any one of bind/call/apply function.
+For more info check https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply 
+*/
 anonyFun.call(person, "Greetings");
 //anonyFun.apply(person,["Greetings"]);
 

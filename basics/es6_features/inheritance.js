@@ -1,5 +1,7 @@
-//Inheritance example.
-//Javascript doesn't support multiple inheritance.However, it support's multilevel inheritance.
+/* 
+Inheritance example.
+Javascript doesn't support multiple inheritance.However, it support's multilevel inheritance. 
+*/
 
 class Person {
     constructor(name, age) {

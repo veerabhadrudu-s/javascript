@@ -8,9 +8,11 @@ let person = {
     }
 };
 
-// Destructuring of Array.
-// In array,in order to skip element during destructuring we skip it using 2 comma's.
-// In the below example 3rd eleemnt is skipped.
+/* 
+Destructuring of Array.
+In array,in order to skip element during destructuring we skip it using 2 comma's.
+In the below example 3rd eleemnt is skipped. 
+*/
 let [one, two, , four] = numbers;
 // Destructuring of Object.
 let { name, age, greet } = person;

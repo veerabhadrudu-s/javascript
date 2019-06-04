@@ -11,7 +11,7 @@ function scopeFunction(){
     console.log(global.scope);
 }
 
-// Below line will cause error as the global variable used before it's declared.
+//Below line will cause error as the global variable used before it's declared.
 //console.log(globalScopeVariableInFunction);
 scopeFunction();
 console.log(scope);

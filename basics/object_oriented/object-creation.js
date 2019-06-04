@@ -1,5 +1,5 @@
-//Way's to create object.
-// Literal Notation.
+//Different Way's to create object.
+//Literal Notation.
 var person ={
     name:"Veera",
     age:"31",
