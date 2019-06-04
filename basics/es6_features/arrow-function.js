@@ -1,6 +1,7 @@
 //This is a sample example related to arrow function or lamda expression
 //Arrow function is alternative representation for ananymous function.
-//The major difference is it preserves "this" i.e in arrow function "this" keywork will refer/point to enclosing context object.
+//The major difference is it preserves "this" i.e 
+//in arrow function "this" keywork will refer/point to enclosing context object("this") when it was created.
 //In this example we have using Tempalte String feature using ``(backtick character). 
 
 function Person(name, age) {
@@ -10,6 +11,7 @@ function Person(name, age) {
         console.log(`${message} ${this.name}`);
         console.log(`Anonymous function - Person with name ${this.name} has age ${this.age} `);
         console.log(this);
+        return ()=>console.log(`Anonymous function returned arrow function - `+this);
     };
     this.printDetailsUsingArrowFunction = (message) => {
         console.log(`${message} ${this.name}`);
@@ -24,8 +26,11 @@ let person = new Person("Veera", 31);
 let anonyFun = person.printDetailsUsingAnanymous;
 let fatArrowFun = person.printDetailsUsingArrowFunction;
 this.this_anonyFun = person.printDetailsUsingAnanymous;
-//In the Below function call "this" points to global object
-anonyFun("Greetings");
+//In the below function call "this" points to global object
+let anonyFunRet=anonyFun("Greetings");
+//Again here this below arrow function call(which was response from previous method call) will point "this" to global
+//As we know that arrow function will point to closed context of "this" when it was created,In this case it's global.
+anonyFunRet();
 //In the Below function call "this" points to Current execution object (Object representing to this file/module). 
 this.this_anonyFun("Greetings");
 // As this is a lamda function reference, "this" in this function call will point to person object irrespective of the way we execute the function. 
@@ -57,4 +62,5 @@ let objectLiteral = {
 };
 
 objectLiteral.printDetailsUsingArrowFunction("Greetings");
-
+console.log('Persons prototype is '+Person.prototype);
+console.log('Persons prototype\'s prototype is '+Person.prototype.prototype);
