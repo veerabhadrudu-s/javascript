@@ -41,7 +41,7 @@ person3.printDetails();
 new Person("Abraham",21).printDetails();
 //Below example direclty binds the values and printDetails function to global object of node. 
 //In case of javascript running in browser, it will bind to window object.
-//This due to we are directly invoking function rather than calling as constructor function using new keyword.
+//This is due to direct invokation of function rather than calling as constructor function using new keyword.
 Person("Jhon",47);
 global.printDetails();
 
