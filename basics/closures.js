@@ -7,16 +7,16 @@ this state(user object) is private scope to rest of the program.
 */
 
 
-function printUserDetails(userName, age) {
+function printUserDetails(userName, age,message) {
     let user = {
         userName: userName,
         age: age
     };
     return function closureFunction(){
-        console.log(`User with name ${user.userName} has ${user.age} year's of age.`);
+        console.log(`User with name ${user.userName} has ${user.age} year's of age. Greetings message - ${message}`);
     }
 }
 
-var closureFN=printUserDetails("Veera",31);
+var closureFN=printUserDetails("Veera",31,"Good Morning !");
 closureFN();
 

@@ -42,6 +42,7 @@ console.log(student.getDetails());
 console.log(employee.getDetails());
 console.log(`Person class type is ${typeof Person}`);
 console.log(`Person class object type is ${typeof person}`);
+console.log(`Person prototype type is ${typeof Person.prototype}`);
 console.log(`Is Person class prototype is equal to Object.prototype ${Person.prototype===Object.prototype}`);
 console.log(`Is Person class prototype's prototype is equal to Object.prototype ${Person.prototype.__proto__===Object.prototype}`);
 console.log(`Is Employee class prototype is equal to Person class ${Employee.prototype===Person}`);
