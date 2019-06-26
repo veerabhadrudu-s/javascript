@@ -71,7 +71,7 @@ console.log('Persons prototype\'s prototype is '+Person.prototype.__proto__);
 console.log(`Persons prototype's prototype is equal to Object's prototype ${person.__proto__.__proto__==Object.prototype}`);
 console.log('objectLiteral prototype is '+objectLiteral.__proto__);
 console.log(`Is objectLiteral prototype equal to Object\'s prototype ${objectLiteral.__proto__==Object.prototype}`);
-console.log(`Is objectLiteral prototype's prototype ${objectLiteral.__proto__.__proto__}`);
+console.log(`ObjectLiteral prototype's prototype ${objectLiteral.__proto__.__proto__}`);
 
 function FindAllMethods(obj) {
     return Object.getOwnPropertyNames(obj).filter(function(property) {
