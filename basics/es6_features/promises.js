@@ -97,10 +97,32 @@ testNestedPromises(new PromiseDetails(5, 1))
     .catch(reason => console.log(`Inside Catch block - Reason for failure is ${reason}`));
  */
 // Scenario 5.b
-testNestedPromises(new PromiseDetails(1, 1))
+/* testNestedPromises(new PromiseDetails(1, 1))
     .then(result => { console.log(`First Then - `, result); return testNestedPromises(result); })
     .then(function (result) { console.log(`Second Then - `, result); return testNestedPromises(result); }, function (reason) { console.log(`Second then - Reason for failure is ${reason}`); throw new Error("Second then exception"); })
     .then(function (result) { console.log(`Third Then - `, result); return testNestedPromises(result); }, function (reason) { console.log(`Third then - Reason for failure is ${reason}`); throw new Error("Third then exception"); })
     .then(function (result) { console.log(`Fourth Then - `, result); return testNestedPromises(result); }, function (reason) { console.log(`Fouth then - Reason for failure is ${reason}`); throw new Error("Fourth then exception"); })
     .then(function (result) { console.log(`Fifth Then - `, result); })
-    .catch(reason => console.log(`Inside Catch block - Reason for failure is ${reason}`)); 
+    .catch(reason => console.log(`Inside Catch block - Reason for failure is ${reason}`));  */
+
+
+// Scenario 6.a - Finally block while success
+/* testNestedPromises(new PromiseDetails(10, 1))
+    .then(result => { console.log(`First Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Second Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Third Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Fourth Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Fifth Then - `, result); })
+    .catch(reason => console.log(`Inside Catch block - Reason for failure is ${reason}`))
+    .finally(() => console.log(`Inside finally block.`));
+ */
+// Scenario 6.b - Finally block while failure
+
+testNestedPromises(new PromiseDetails(10, 1))
+    .then(result => { console.log(`First Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Second Then - `, result); throw new Error("Second Then"); })
+    .then(function (result) { console.log(`Third Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Fourth Then - `, result); return testNestedPromises(result); })
+    .then(function (result) { console.log(`Fifth Then - `, result); })
+    .catch(reason => console.log(`Inside Catch block - Reason for failure is ${reason}`))
+    .finally(() => console.log(`Inside finally block.`));
