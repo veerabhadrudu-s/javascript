@@ -54,7 +54,7 @@ this.greetings();
 console.log(this);
 
 //Another example of arrow function defined as object method
-//In this case enclosing scope or near by this scope while defing objectLiteral(which includes defining arrow function) is local module/file.
+//In this case enclosing scope or near by this scope while defining objectLiteral(which includes defining arrow function) is local module/file.
 let objectLiteral = {
     name: "Garry",
     age: 25,
