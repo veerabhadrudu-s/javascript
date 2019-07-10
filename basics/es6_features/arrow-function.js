@@ -3,7 +3,7 @@ This is a sample example related to arrow function or lamda expression
 Arrow function is alternative representation for ananymous function.
 The major difference is it preserves "this" i.e 
 in arrow function "this" keywork will refer/point to enclosing context object("this") when it was created.
-In this example we have using Tempalte String feature using ``(backtick character).  
+In this example we have using Template String feature using ``(backtick character).  
 */
 
 function Person(name, age) {
