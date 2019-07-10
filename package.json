@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gado4b2/javascript.git"
+    "url": "git+https://github.com/veerabhadrudu-s/javascript.git"
   },
   "author": "veeras",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/gado4b2/javascript/issues"
+    "url": "https://github.com/veerabhadrudu-s/javascript/issues"
   },
-  "homepage": "https://github.com/gado4b2/javascript#readme",
+  "homepage": "https://github.com/veerabhadrudu-s/javascript#readme",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
