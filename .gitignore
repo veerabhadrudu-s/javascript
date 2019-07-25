@@ -61,7 +61,4 @@ typings/
 .next
 
 
-# Ignoring lock file
-package-lock.json
-
 .vscode/
