@@ -75,7 +75,7 @@ testNestedPromises(new PromiseDetails(5, 1))
     .then(function (result) { console.log(`Fifth Then - `, result); })
     .catch(reason => console.log(`Inside Catch block - Reason for failure is ${reason}`)); */
 
-// Scenario 4 -> you can't have promise error handling function in then and prmosie then chain after that.
+// Scenario 4 -> you can't have promise error handling function in then and promise then chain after that.
 // Below scenario will continue to third then promise chain ,even though it was failed in second then, This behaviour is due to failure/exception handler/anonymous function defined in second then.So to over come this issue don't mix error function's in promise then chain (or) perform throw exception in the second then error handler/anaonymous function.This is demonstrated in next example.
 
 /* testNestedPromises(new PromiseDetails(1, 1))

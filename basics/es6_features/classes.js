@@ -2,7 +2,7 @@
 Example for defining classes in javascript.
 Don't confuse class with other programing language that offers.
 Here in javascript Class is a syntactic suger of function/Construcutor function.
-So the type of class in JavaScript is still function 
+So the type of class in JavaScript is still function and instanceof Function object.
 */
 
 class Person{
