@@ -42,21 +42,34 @@ by newly created object and this inheritance goes until Object.prototype where O
 Note that newly created object will never get properties or methods of function object , it only gets properties and methods assigned to 
 "this" reference and from function object prototype property and it's hierarchy. 
 
-Example:-
  */
 
-function Person(){
-	this.name="Veera";
-	this.greetings=function(){
-		console.log("Greetings "+this.name);
+/* 
+ Also Function object might be top level in the hierarchy.
+ So Object Constructor function might be inheriting from Function Object. Look below console out puts 
+*/
+
+console.log(Object.__proto__ == Function.prototype);
+console.log(Function.__proto__ == Object.prototype);
+
+//Example 2
+
+function Person() {
+	this.name = "Veera";
+	this.greetings = function () {
+		console.log("Greetings " + this.name);
 	};
 }
 
-Person.functionObjectProperty="testFunctionObjectProperty";
-Person.functionObjectMethod=function(){ console.log("testfunctionObjectMethod"); } ;
+Person.functionObjectProperty = "testFunctionObjectProperty";
+Person.functionObjectMethod = function () {
+	console.log("testfunctionObjectMethod");
+};
 
-Person.prototype.prototypeProperty="testPrototypeProperty";
-Person.prototype.prototypeMethod=function(){ console.log("testPrototypeMethod"); } ;
+Person.prototype.prototypeProperty = "testPrototypeProperty";
+Person.prototype.prototypeMethod = function () {
+	console.log("testPrototypeMethod");
+};
 
 
 console.log(Person.functionObjectProperty); // Output -> "testFunctionObjectProperty"
@@ -67,7 +80,7 @@ console.log(Object instanceof Function); // Output -> true . This indicates Obje
 console.log(String instanceof Function); // Output -> true . This indicates String function is a "Function" object.
 console.log(Number instanceof Function); // Output -> true . This indicates Number function is a "Function" object.
 
-var person=new Person();
+var person = new Person();
 
 console.log(person instanceof Person); // Output -> true . This indicates "person" is a reference object of Person created using "new" operator on Person Function object.
 
@@ -96,4 +109,3 @@ Make sure to check below links also to understand implementing inheritance using
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model 
 */
-
