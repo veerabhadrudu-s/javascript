@@ -41,18 +41,8 @@ by newly created object and this inheritance goes until Object.prototype where O
 
 Note that newly created object will never get properties or methods of function object , it only gets properties and methods assigned to 
 "this" reference and from function object prototype property and it's hierarchy. 
-
+Example
  */
-
-/* 
- Also Function object might be top level in the hierarchy.
- So Object Constructor function might be inheriting from Function Object. Look below console out puts 
-*/
-
-console.log(Object.__proto__ == Function.prototype);
-console.log(Function.__proto__ == Object.prototype);
-
-//Example 2
 
 function Person() {
 	this.name = "Veera";
