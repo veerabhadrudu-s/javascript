@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Java Script Practice Programs.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,11 +16,5 @@
   "bugs": {
     "url": "https://github.com/veerabhadrudu-s/javascript/issues"
   },
-  "homepage": "https://github.com/veerabhadrudu-s/javascript#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/node": "^7.4.5",
-    "@babel/preset-env": "^7.4.5"
-  }
+  "homepage": "https://github.com/veerabhadrudu-s/javascript#readme"
 }

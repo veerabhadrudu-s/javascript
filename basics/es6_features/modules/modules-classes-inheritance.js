@@ -1,23 +1,6 @@
-/* 
-ES6 modules and inheritance in one example
-Make sure to run this program using below babel command.
-npx babel-node basics/es6_features/modules/modules-classes-inheritance.js 
-
-Babel is a tool/compiler which converts ES6 code to Before ES6 code.
-babel-node command is a CLI that works exactly the same as the Node.js CLI, 
-with the added benefit of compiling with Babel presets and plugins before running it.
-
-For more info on this check out below links
-https://babeljs.io/docs/en/babel-node
-https://github.com/babel/example-node-server
-https://babeljs.io/docs/en/babel-cli
-https://babeljs.io/docs/en/
-https://babeljs.io/en/setup
-*/
-
-import { Person } from "./person";
-import { Employee } from "./employee";
-import { Student } from "./student";
+import { Person } from "./person.js";
+import { Employee } from "./employee.js";
+import { Student } from "./student.js";
 
 let person = new Person("Veera", 31);
 let student = new Student("Garry", 21, "MIT");
