@@ -41,8 +41,40 @@ by newly created object and this inheritance goes until Object.prototype where O
 
 Note that newly created object will never get properties or methods of function object , it only gets properties and methods assigned to 
 "this" reference and from function object prototype property and it's hierarchy. 
-Example
+
  */
+
+/*
+ PLEASE PAY ATTENTION TO BELOW COMMENT.
+
+ Object function object __proto__ property is Function.prototype.But, Function.prototype is Object.prototype.__proto__.
+ So , Every object in javascript( including function type object's) will have root prototype as Object.prototype
+ 
+ Following are the all objects hierarchy in java script, 
+
+ 1) Object.prototype is the root object in the hierarchy.
+ 2) Function.prototype is the next object in the hierarchy.Because, Function.prototype.__proto__ is Object.prototype.
+ 3) Function function object is the next one in the hierarchy.
+ 4) Object function object is the next one in the hierarchy.Because, Object.__proto__ is Function.prototype 
+ 
+ Also, Function function object is instanceof Object function object and 
+ Object function object is instanceof Function function object.
+ Above statement might be confusing .But, Logically it makes sense.
+
+*/
+
+console.log("Start of example 1");
+console.log(Object.prototype.__proto__);
+console.log(Function.prototype.__proto__ == Object.prototype);
+console.log(Object.__proto__ == Function.prototype);
+console.log(Object instanceof Function);
+console.log(Function instanceof Object);
+console.log("End of example 1");
+console.log();
+console.log();
+
+//Example 2
+console.log("Start of example 2");
 
 function Person() {
 	this.name = "Veera";
