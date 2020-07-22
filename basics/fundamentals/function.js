@@ -54,8 +54,8 @@ Note that newly created object will never get properties or methods of function 
 
  1) Object.prototype is the root object in the hierarchy.
  2) Function.prototype is the next object in the hierarchy.Because, Function.prototype.__proto__ is Object.prototype.
- 3) Function function object is the next one in the hierarchy.
- 4) Object function object is the next one in the hierarchy.Because, Object.__proto__ is Function.prototype 
+ Child 1 of Function.prototype) Function function object and Sibling to Object function object. Because, Function.__proto__ is Function.prototype. 
+ Child 2 of Function.prototype) Object function object and Sibling to Function function object. Because, Object.__proto__ is Function.prototype. 
  
  Also, Function function object is instanceof Object function object and 
  Object function object is instanceof Function function object.
@@ -64,11 +64,12 @@ Note that newly created object will never get properties or methods of function 
 */
 
 console.log("Start of example 1");
-console.log(Object.prototype.__proto__);
-console.log(Function.prototype.__proto__ == Object.prototype);
-console.log(Object.__proto__ == Function.prototype);
-console.log(Object instanceof Function);
-console.log(Function instanceof Object);
+console.log("What is Object.prototype.__proto__ ->  %s  ",Object.prototype.__proto__)
+console.log(`Is Function.prototype.__proto__ == Object.prototype  ? -> ${Function.prototype.__proto__ == Object.prototype}`);
+console.log(`Is Object.__proto__ == Function.prototype ? -> ${Object.__proto__ == Function.prototype}`);
+console.log(`Is Function.__proto__ == Function.prototype ? -> ${Function.__proto__ == Function.prototype}`);
+console.log(`Is Object instanceof Function ? ->  ${Object instanceof Function}`);
+console.log(`Is Function instanceof Object ? -> ${Function instanceof Object}`);
 console.log("End of example 1");
 console.log();
 console.log();
