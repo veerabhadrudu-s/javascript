@@ -1,6 +1,6 @@
-import { Person } from "./person.js";
-import { Employee } from "./employee.js";
-import { Student } from "./student.js";
+import { Person } from "./person.mjs";
+import { Employee } from "./employee.mjs";
+import { Student } from "./student.mjs";
 
 let person = new Person("Veera", 31);
 let student = new Student("Garry", 21, "MIT");
